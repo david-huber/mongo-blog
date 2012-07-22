@@ -50,7 +50,9 @@
   <ItemGroup>
     <Compile Include="Documents\Comment.cs" />
     <Compile Include="Documents\Post.cs" />
+    <Compile Include="Documents\Subscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ISubscriptionRepository.cs" />
     <Compile Include="Repositories\PostRepository.cs" />
   </ItemGroup>
   <ItemGroup>

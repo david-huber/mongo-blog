@@ -43,6 +43,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -50,14 +52,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionResultExtensions.cs" />
     <Compile Include="Integration\MongoTests.cs" />
     <Compile Include="Integration\PostRepositoryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\SignInControllerTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Mongo.Blog\Mongo.Blog.csproj">
+      <Project>{47E852AB-C86A-48D2-9412-5C2CB9EB55B9}</Project>
+      <Name>Mongo.Blog</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Mongo.csproj">
       <Project>{23389383-6150-407F-97D7-30456C02BABE}</Project>
       <Name>Mongo</Name>
