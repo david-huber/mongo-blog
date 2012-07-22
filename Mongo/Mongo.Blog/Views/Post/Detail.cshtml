@@ -1,0 +1,32 @@
+﻿@model Mongo.Documents.Post
+
+@{
+    ViewBag.Title = "Detail";
+}
+
+@using (Html.BeginForm(new { Action = "AddComment", postId = Model.Id}))
+{
+    <h2>@Model.Title</h2>
+    <p>@Model.Content</p>
+    if (Model.Comments != null)
+    {
+        foreach (var comment in Model.Comments)
+        {
+            <hr />
+            <dl>
+                <dt>Name:</dt>
+                <dd>@comment.UserName</dd>
+                <dt>Comment</dt>
+                <dd>@comment.Content</dd>
+            </dl>
+        }
+    }
+    <h3>Add a comment</h3>
+    <dl>
+        <dt>Name:</dt>
+        <dd>@Html.TextBox("UserName", "")</dd>
+        <dt>Comment</dt>
+        <dd>@Html.TextArea("Content", "")</dd>
+    </dl>
+    <input type="submit" value="Submit" />
+}

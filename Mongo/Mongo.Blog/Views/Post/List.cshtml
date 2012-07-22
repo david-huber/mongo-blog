@@ -1,0 +1,22 @@
+﻿@model List<Mongo.Documents.Post>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+<div>
+    
+    @foreach (var post in Model)
+    {
+        <hr />
+        <div>
+            <h4>@Html.ActionLink(post.Title, "Detail", new { id = post.Id })</h4>
+            <p>@post.Content</p>
+        </div>    
+    }
+    <hr />
+    
+    @Html.ActionLink("Add a post", "Add")
+
+</div>
