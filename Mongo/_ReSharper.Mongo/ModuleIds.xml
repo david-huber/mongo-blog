@@ -1,5 +1,0 @@
-<Modules>
-  <Module PersistentId="78431EAB-62BC-4E2F-96CC-688888F80ED6" ModuleId="Mongo.Tests" />
-  <Module PersistentId="23389383-6150-407F-97D7-30456C02BABE" ModuleId="Mongo" />
-  <Module PersistentId="47E852AB-C86A-48D2-9412-5C2CB9EB55B9" ModuleId="Mongo.Blog" />
-</Modules>
