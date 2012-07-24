@@ -20,14 +20,8 @@ namespace Mongo.Blog
             routes.MapRoute(
                 "Default", // Route name
                 "{controller}/{action}/{id}", // URL with parameters
-                new { controller = "Home", action = "Index", id = UrlParameter.Optional } // Parameter defaults
+                new { controller = "Post", action = "Index", id = UrlParameter.Optional } // Parameter defaults
             );
-
-            routes.MapRoute(
-               "Detail", "{controller}/{action}/{id}",
-               new { controller = "Post", action = "", id = "" }
-               );
-
         }
 
         protected void Application_Start()

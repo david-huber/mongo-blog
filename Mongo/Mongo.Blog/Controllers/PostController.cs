@@ -11,8 +11,7 @@ namespace Mongo.Blog.Controllers
 {
     public class PostController : Controller
     {
-        private PostRepository _postRepository
-            ;
+        private PostRepository _postRepository;
 
         public PostController()
         {
@@ -27,7 +26,8 @@ namespace Mongo.Blog.Controllers
 
         public ActionResult Index()
         {
-            return View();
+            var posts = _postRepository.Find();
+            return View("List", posts.OrderByDescending(x => x.Posted).ToList());
         }
 
         public ActionResult Detail(string id)
@@ -48,7 +48,7 @@ namespace Mongo.Blog.Controllers
         }
 
 
-
+        [Authorize]
         public ActionResult Add(Post post)
         {
             // must validate the post 
